@@ -1,16 +1,16 @@
 import Image from "next/image";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import RevealOnScroll from "../components/RevealOnScroll";
-import LogoTicker from "../components/LogoTicker";
-import Stats from "../components/Stats";
-import Features from "../components/Features";
-import Security from "../components/Security";
-import Workflow from "../components/Workflow";
-import InteractiveAgent from "../components/InteractiveAgent";
-import Testimonials from "../components/Testimonials";
-import FAQ from "../components/FAQ";
-import CTA from "../components/CTA";
+import Header from "../components/landing/Header";
+import Hero from "../components/landing/Hero";
+import RevealOnScroll from "../components/landing/RevealOnScroll";
+import LogoTicker from "../components/landing/LogoTicker";
+import Stats from "../components/landing/Stats";
+import Features from "../components/landing/Features";
+import Security from "../components/landing/Security";
+import Workflow from "../components/landing/Workflow";
+import InteractiveAgent from "../components/landing/InteractiveAgent";
+import Testimonials from "../components/landing/Testimonials";
+import FAQ from "../components/landing/FAQ";
+import CTA from "../components/landing/CTA";
 
 export default function Home() {
   return (

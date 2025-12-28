@@ -26,6 +26,7 @@ import ReactFlow, {
   useEdgesState,
 } from "reactflow";
 import "reactflow/dist/style.css";
+import { useRouter } from "next/navigation";
 
 // --- Custom Nodes (Unchanged) ---
 
@@ -247,6 +248,8 @@ const Hero: React.FC = () => {
   const [nodes, , onNodesChange] = useNodesState(initialNodes);
   const [edges, , onEdgesChange] = useEdgesState(initialEdges);
 
+  const router = useRouter()
+
   const nodeTypes = useMemo(
     () => ({
       userNode: UserNode,
@@ -256,6 +259,10 @@ const Hero: React.FC = () => {
     }),
     []
   );
+
+  const openLogin = () => {
+    router.push("/login");
+  };
 
   return (
     <section className="relative w-full h-screen overflow-hidden bg-slate-50 selection:bg-orange-100 selection:text-orange-900 flex items-center">
@@ -335,7 +342,7 @@ const Hero: React.FC = () => {
 
             {/* Buttons - Re-enable pointer events */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2 pointer-events-auto">
-              <button className="relative px-6 py-3 text-white bg-primary hover:bg-slate-800 rounded-xl transition-all shadow-lg hover:shadow-primary/30 font-medium text-lg flex items-center justify-center gap-2 group overflow-hidden">
+              <button className="relative px-6 py-3 text-white bg-primary hover:bg-slate-800 rounded-xl transition-all shadow-lg hover:shadow-primary/30 font-medium text-lg flex items-center justify-center gap-2 group overflow-hidden" onClick={openLogin}>
                 <span className="relative z-10 flex items-center gap-2">
                   Start New Research
                   <ArrowRight
